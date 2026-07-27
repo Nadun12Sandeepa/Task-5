@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment · MediCare Plus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="sb-brand">
+    <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg></div>
+    <div class="sb-brand-text"><div class="n">MediCare Plus</div><div class="s">Patient Portal</div></div>
+  </div>
+  <div class="nav-group">Main Menu</div>
+  <div id="navItems">
+  <a class="nav-item" href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span>Dashboard</span></a>
+<a class="nav-item active" href="appointments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg><span>Appointments</span></a>
+<a class="nav-item" href="records.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span>Medical Records</span></a>
+<a class="nav-item" href="prescriptions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L3 10a5 5 0 007 7l7-7a5 5 0 00-7-7z"/><path d="M8 12l4 4"/></svg><span>Prescriptions</span></a>
+<a class="nav-item" href="lab-reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6l-5 9a2 2 0 002 3h12a2 2 0 002-3l-5-9V2"/></svg><span>Lab Reports</span></a>
+<a class="nav-item" href="payments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>Payments</span></a>
+<a class="nav-item" href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0116 0"/></svg><span>Profile</span></a>
+
+  </div>
+  <div class="sidebar-foot">
+    <a class="logout-btn" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg> Log out</a>
+  </div>
+</aside>
+<div class="main">
+<div class="topbar">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+    <input type="text" placeholder="Search patients, files, prescriptions...">
+  </div>
+  <div class="topbar-user">
+    <div class="tu-name"><div class="n">Sarah Jenkins</div><div class="r">Patient</div></div>
+    <div class="avatar">SJ</div>
+  </div>
+</div>
+<div class="content">
+
+<div class="banner">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+  Information saved <span class="sub">— you are viewing the appointment booking assistant. Selected specialty: Cardiology.</span>
+</div>
+<div class="page-head"><h1>Book a Medical Consultation</h1><p>Configure your preferred clinic, clinical doctor, date, and submit reason for visiting.</p></div>
+
+<div class="steps">
+  <div class="step done"><span class="dot">✓</span>Specialty</div><div class="step-line"></div>
+  <div class="step now"><span class="dot">2</span>Select Clinician</div><div class="step-line"></div>
+  <div class="step"><span class="dot">3</span>Preferred Date &amp; Time</div><div class="step-line"></div>
+  <div class="step"><span class="dot">4</span>Clinical Details</div>
+</div>
+
+<div class="book-layout">
+  <div>
+    <div class="card card-pad" style="margin-bottom:16px;">
+      <div class="field-label">Step 1 · Clinical Department &amp; Specialty</div>
+      <select class="form-select" id="specialtySelect">
+        <option>Cardiology Clinic</option>
+        <option>Dermatology Clinic</option>
+        <option>General Medicine</option>
+        <option>Orthopedics</option>
+      </select>
+
+      <div class="field-label">Step 2 · Choose Doctor</div>
+      <div class="doctor-opt selected" data-doc="Dr. Matthew Adams">
+        <div class="doc-avatar">MA</div>
+        <div class="doc-info"><div class="name">Dr. Matthew Adams</div><div class="role">Senior Cardiologist</div>
+          <div class="doc-meta">★ 4.9 · <b>12 available slots today</b></div>
+        </div>
+        <button class="choose-btn">Clinician Selected</button>
+      </div>
+      <div class="doctor-opt" data-doc="Dr. Olivia Bennett">
+        <div class="doc-avatar">OB</div>
+        <div class="doc-info"><div class="name">Dr. Olivia Bennett</div><div class="role">Cardiologist (Consultant)</div>
+          <div class="doc-meta">★ 4.8 · 5 available slots tomorrow</div>
+        </div>
+        <button class="choose-btn">Choose Physician</button>
+      </div>
+    </div>
+
+    <div class="card card-pad" style="margin-bottom:16px;">
+      <div class="field-label">Step 3 · Pick Date &amp; Time — September 2025</div>
+      <div class="cal">
+        <div class="dow">M</div><div class="dow">T</div><div class="dow">W</div><div class="dow">T</div><div class="dow">F</div><div class="dow">S</div><div class="dow">S</div>
+        <div class="day">22</div><div class="day">23</div><div class="day sel" data-day="24">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div>
+      </div>
+      <div class="field-label" style="margin-bottom:10px;">Available Times (Sept 24)</div>
+      <div class="times">
+        <div class="time-slot">08:30 AM</div><div class="time-slot">09:15 AM</div><div class="time-slot sel">10:45 AM</div>
+        <div class="time-slot">10:00 AM</div><div class="time-slot">11:30 AM</div><div class="time-slot">01:30 PM</div>
+        <div class="time-slot">02:15 PM</div><div class="time-slot">03:00 PM</div>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <div class="field-label">Step 4 · Reason for Visit (Required)</div>
+      <textarea class="form-textarea" id="reasonInput" placeholder="Please type the symptoms or request description..."></textarea>
+      <div class="err-msg hidden" id="reasonErr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+        Reason for medical visit cannot be empty.
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-pad" style="position:sticky;top:76px;">
+    <div class="field-label" style="margin-bottom:12px;">Appointment Summary</div>
+    <div class="summary-row"><span class="k">Specialty Clinic</span><span class="v" id="sumSpecialty">Cardiology</span></div>
+    <div class="summary-row"><span class="k">Physician</span><span class="v" id="sumDoc">Dr. Matthew Adams</span></div>
+    <div class="summary-row"><span class="k">Date &amp; Time</span><span class="v" id="sumDateTime">Sept 24, 2025 · 10:45 AM</span></div>
+    <div class="summary-row"><span class="k">Est. Out-of-Pocket Cost</span><span class="v">$45.00</span></div>
+    <a href="dashboard.html" class="btn-primary" style="margin-top:14px;display:block;text-align:center;text-decoration:none;" id="confirmBookingBtn">Confirm Consultation Booking</a>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+document.querySelectorAll('.doctor-opt').forEach(opt => {
+  opt.addEventListener('click', () => {
+    document.querySelectorAll('.doctor-opt').forEach(o => {
+      o.classList.remove('selected');
+      o.querySelector('.choose-btn').textContent = 'Choose Physician';
+    });
+    opt.classList.add('selected');
+    opt.querySelector('.choose-btn').textContent = 'Clinician Selected';
+    document.getElementById('sumDoc').textContent = opt.dataset.doc;
+  });
+});
+document.querySelectorAll('.cal .day').forEach(d => {
+  if(!d.dataset.day) return;
+  d.addEventListener('click', () => {
+    document.querySelectorAll('.cal .day').forEach(x => x.classList.remove('sel'));
+    d.classList.add('sel');
+    updateSummaryDateTime();
+  });
+});
+document.querySelectorAll('.time-slot').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.time-slot').forEach(x => x.classList.remove('sel'));
+    t.classList.add('sel');
+    updateSummaryDateTime();
+  });
+});
+function updateSummaryDateTime(){
+  const day = document.querySelector('.cal .day.sel');
+  const time = document.querySelector('.time-slot.sel');
+  if(day && time){
+    document.getElementById('sumDateTime').textContent = `Sept ${day.textContent}, 2025 · ${time.textContent}`;
+  }
+}
+document.getElementById('specialtySelect').addEventListener('change', (e) => {
+  document.getElementById('sumSpecialty').textContent = e.target.value.replace(' Clinic','');
+});
+const reasonInput = document.getElementById('reasonInput');
+const reasonErr = document.getElementById('reasonErr');
+document.getElementById('confirmBookingBtn').addEventListener('click', (e) => {
+  if(reasonInput.value.trim() === ''){
+    e.preventDefault();
+    reasonInput.classList.add('err');
+    reasonErr.classList.remove('hidden');
+    reasonInput.focus();
+  }
+});
+reasonInput.addEventListener('input', () => {
+  if(reasonInput.value.trim() !== ''){
+    reasonInput.classList.remove('err');
+    reasonErr.classList.add('hidden');
+  }
+});
+</script>
+</body>
+</html>

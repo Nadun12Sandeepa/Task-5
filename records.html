@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Records · MediCare Plus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="sb-brand">
+    <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg></div>
+    <div class="sb-brand-text"><div class="n">MediCare Plus</div><div class="s">Patient Portal</div></div>
+  </div>
+  <div class="nav-group">Main Menu</div>
+  <div id="navItems">
+  <a class="nav-item" href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span>Dashboard</span></a>
+<a class="nav-item" href="appointments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg><span>Appointments</span></a>
+<a class="nav-item active" href="records.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span>Medical Records</span></a>
+<a class="nav-item" href="prescriptions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L3 10a5 5 0 007 7l7-7a5 5 0 00-7-7z"/><path d="M8 12l4 4"/></svg><span>Prescriptions</span></a>
+<a class="nav-item" href="lab-reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6l-5 9a2 2 0 002 3h12a2 2 0 002-3l-5-9V2"/></svg><span>Lab Reports</span></a>
+<a class="nav-item" href="payments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>Payments</span></a>
+<a class="nav-item" href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0116 0"/></svg><span>Profile</span></a>
+
+  </div>
+  <div class="sidebar-foot">
+    <a class="logout-btn" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg> Log out</a>
+  </div>
+</aside>
+<div class="main">
+<div class="topbar">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+    <input type="text" placeholder="Search patients, files, prescriptions...">
+  </div>
+  <div class="topbar-user">
+    <div class="tu-name"><div class="n">Sarah Jenkins</div><div class="r">Patient</div></div>
+    <div class="avatar">SJ</div>
+  </div>
+</div>
+<div class="content">
+
+<div class="page-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
+  <div><h1>Your Digital Medical Records</h1><p>Access full consultation history, official diagnostics, laboratory results, and medical notes.</p></div>
+  <div style="display:flex;gap:8px;"><button class="btn-sm">Print Records</button><button class="btn-sm btn-teal">Export PDF File</button></div>
+</div>
+
+<div class="card card-pad" style="margin-bottom:18px;">
+  <div class="patient-strip">
+    <div class="big-avatar">SJ</div>
+    <div><div style="font-weight:800;font-size:15px;">Sarah Jenkins</div><div style="font-size:11.5px;color:var(--ink-500);" class="mono">ID: #PT-882909 · Female, 34 yrs</div></div>
+    <div class="divider"></div>
+    <div class="mini-stat"><div class="k">Blood Type</div><div class="v">O Positive (O+)</div></div>
+    <div class="divider"></div>
+    <div class="mini-stat"><div class="k">Allergies</div><div class="v">Penicillin, Shellfish</div></div>
+    <div class="divider"></div>
+    <div class="mini-stat"><div class="k">Emergency Contact</div><div class="v">Robert Jenkins (Spouse)</div></div>
+  </div>
+</div>
+
+<div class="tab-row">
+  <button class="tab-btn active">Visit History</button>
+  <button class="tab-btn">Lab Reports</button>
+  <button class="tab-btn">Prescriptions</button>
+  <button class="tab-btn">Imaging &amp; X-Rays</button>
+  <button class="tab-btn">Immunizations</button>
+</div>
+
+<div class="grid g-2" style="grid-template-columns:1.4fr 1fr;align-items:start;">
+  <div class="card card-pad">
+    <div class="section-title"><h3>Consultation Timeline</h3><span class="link-teal" style="font-size:12px;">Last 12 months</span></div>
+    <div class="timeline-item">
+      <div class="tl-dot-wrap"><div class="tl-dot"></div><div class="tl-line"></div></div>
+      <div style="flex:1;">
+        <div class="tl-head"><span class="doc">Sept 12, 2025 — Dr. Matthew Adams · Cardiology Clinic</span></div>
+        <div class="tl-diag">Primary Diagnosis: Controlled Stage 1 Hypertension</div>
+        <div class="tl-notes">Patient reports minor dizziness on waking. Blood pressure recorded at clinic was 134/82. Cardiovascular sounds remain normal. Discussed maintaining a low-sodium diet and daily exercise of at least 30 minutes. Recommend continuation of Lisinopril 10mg daily as prescribed.</div>
+        <div class="tl-rx">Prescribed: Lisinopril 10mg Oral Tablet (1x daily)</div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="tl-dot-wrap"><div class="tl-dot" style="background:var(--ink-300);"></div></div>
+      <div style="flex:1;">
+        <div class="tl-head"><span class="doc">Aug 05, 2025 — Dr. Olivia Bennett · Dermatology Clinic</span><span class="pill pill-gray">First Visit</span></div>
+        <div class="tl-diag" style="color:var(--ink-700);">Mild Eczema Flare-up</div>
+        <div class="tl-notes">Follow-up recommended in 4 weeks to monitor topical treatment response.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-pad">
+    <div class="section-title"><h3>Featured Lab Analysis</h3><span class="pill pill-red">Abnormal Vital</span></div>
+    <div style="font-size:11px;color:var(--ink-500);margin-bottom:2px;text-transform:uppercase;letter-spacing:.03em;font-weight:700;">Pathology Dept</div>
+    <div style="font-weight:800;font-size:14.5px;margin-bottom:2px;">Complete Blood Count (CBC)</div>
+    <div style="font-size:11.5px;color:var(--ink-500);margin-bottom:14px;">Published: Sept 10, 2025</div>
+    <table style="margin-bottom:6px;">
+      <tr><td style="padding-left:0;">Red Blood Cell Count</td><td style="text-align:right;padding-right:0;"><span class="pill pill-red">3.8 M/µL · Low</span></td></tr>
+      <tr><td style="padding-left:0;">White Blood Cell Count</td><td style="text-align:right;padding-right:0;"><span class="pill pill-green">6,400 /µL · Normal</span></td></tr>
+    </table>
+    <button class="btn-sm btn-teal" style="width:100%;margin-top:8px;">View Official PDF Results</button>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+<script>
+document.querySelectorAll('.tab-btn').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · MediCare Plus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="sb-brand">
+    <div class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v18M3 12h18"/></svg></div>
+    <div class="sb-brand-text"><div class="n">MediCare Plus</div><div class="s">Patient Portal</div></div>
+  </div>
+  <div class="nav-group">Main Menu</div>
+  <div id="navItems">
+  <a class="nav-item active" href="dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg><span>Dashboard</span></a>
+<a class="nav-item" href="appointments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg><span>Appointments</span></a>
+<a class="nav-item" href="records.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><span>Medical Records</span></a>
+<a class="nav-item" href="prescriptions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L3 10a5 5 0 007 7l7-7a5 5 0 00-7-7z"/><path d="M8 12l4 4"/></svg><span>Prescriptions</span></a>
+<a class="nav-item" href="lab-reports.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6l-5 9a2 2 0 002 3h12a2 2 0 002-3l-5-9V2"/></svg><span>Lab Reports</span></a>
+<a class="nav-item" href="payments.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><span>Payments</span></a>
+<a class="nav-item" href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0116 0"/></svg><span>Profile</span></a>
+
+  </div>
+  <div class="sidebar-foot">
+    <a class="logout-btn" href="login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9"/></svg> Log out</a>
+  </div>
+</aside>
+<div class="main">
+<div class="topbar">
+  <div class="search-wrap">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+    <input type="text" placeholder="Search patients, files, prescriptions...">
+  </div>
+  <div class="topbar-user">
+    <div class="tu-name"><div class="n">Sarah Jenkins</div><div class="r">Patient</div></div>
+    <div class="avatar">SJ</div>
+  </div>
+</div>
+<div class="content">
+
+<div class="banner">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+  Welcome back, Sarah Jenkins <span class="sub">— your medical file is updated. You have a prescription pickup pending and one lab result available.</span>
+</div>
+<div class="page-head" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
+  <div><h1>Dashboard</h1><p>A quick look at your appointments, prescriptions and lab activity.</p></div>
+  <a class="btn-sm btn-teal" href="appointments.html" style="display:inline-block;text-decoration:none;">Book Appointment</a>
+</div>
+
+<div class="grid g-3" style="margin-bottom:20px;">
+  <div class="card stat-card">
+    <div class="stat-top"><span class="stat-label">Upcoming Appointments</span>
+      <div class="stat-icon" style="background:var(--mint-100);color:var(--teal-800);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+      </div>
+    </div>
+    <div class="stat-value">2 Scheduled</div>
+    <div class="stat-delta" style="color:var(--ink-500);">Next: Sept 24, Dr. Adams</div>
+  </div>
+  <div class="card stat-card">
+    <div class="stat-top"><span class="stat-label">Active Prescriptions</span>
+      <div class="stat-icon" style="background:var(--amber-bg);color:var(--amber);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 3L3 10a5 5 0 007 7l7-7a5 5 0 00-7-7z"/><path d="M8 12l4 4"/></svg>
+      </div>
+    </div>
+    <div class="stat-value">3 Prescriptions</div>
+    <div class="stat-delta" style="color:var(--ink-500);">2 refills remaining</div>
+  </div>
+  <div class="card stat-card">
+    <div class="stat-top"><span class="stat-label">Pending Lab Reports</span>
+      <div class="stat-icon" style="background:var(--green-ok-bg);color:var(--green-ok);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2v6l-5 9a2 2 0 002 3h12a2 2 0 002-3l-5-9V2"/></svg>
+      </div>
+    </div>
+    <div class="stat-value">1 Lab Report Ready</div>
+    <div class="stat-delta" style="color:var(--ink-500);">Hematology Lab</div>
+  </div>
+</div>
+
+<div class="grid g-2">
+  <div class="card card-pad">
+    <div class="section-title"><h3>Upcoming Consultations</h3><a class="link-teal" href="appointments.html">See all appointments</a></div>
+    <table>
+      <tr><th>Doctor</th><th>Specialty</th><th>Date</th><th>Time</th><th>Status</th></tr>
+      <tr><td>Dr. Matthew Adams</td><td>Cardiology</td><td>Sept 24, 2025</td><td>10:30 AM</td><td><span class="pill pill-green">Confirmed</span></td></tr>
+      <tr><td>Dr. Olivia Bennett</td><td>Dermatology</td><td>Oct 02, 2025</td><td>02:15 PM</td><td><span class="pill pill-amber">Pending Prep</span></td></tr>
+    </table>
+  </div>
+  <div class="card card-pad">
+    <div class="section-title"><h3>Active Prescriptions</h3><a class="link-teal" href="prescriptions.html">Refill requests</a></div>
+    <table>
+      <tr><th>Medication</th><th>Dosage</th><th>Refills</th></tr>
+      <tr><td>Lisinopril 10mg</td><td>1 tablet daily for hypertension</td><td><span class="pill pill-green">2 remaining</span></td></tr>
+      <tr><td>Metformin 500mg</td><td>2 tablets daily with meals</td><td><span class="pill pill-red">None left</span></td></tr>
+    </table>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
